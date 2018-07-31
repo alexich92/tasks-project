@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/add-task', 'HomeController@addTask')->name('addTask');
+
+Route::patch('/edit-task/{id}', 'HomeController@editTask')->name('editTask');
+
+Route::delete('/delete-task/{id}', 'HomeController@deleteTask')->name('deleteTask');
